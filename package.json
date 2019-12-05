@@ -1,0 +1,21 @@
+{
+  "name": "performance-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "h-include": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2"
+  }
+}
