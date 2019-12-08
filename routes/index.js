@@ -19,8 +19,12 @@ router.get("/items/v1", (req, res) => {
   res.json(data);
 });
 
-router.get("/gtm", (req, res) => {
-  res.sendFile('facebook.js', { root: path.join(__dirname, '../public/js/vendors') });
+router.get("/facebook", (req, res) => {
+  res.sendFile('facebook.js', { root: path.join(__dirname, '../public/js/3rd-parties') });
+});
+
+router.get("/fbevents", (req, res) => {
+  res.sendFile('fbevents.js', { root: path.join(__dirname, '../public/js/3rd-parties') });
 });
 
 module.exports = router;

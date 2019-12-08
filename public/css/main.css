@@ -3,7 +3,7 @@ body {
   height: 100%;
   margin: 0;
   font-size: 16px;
-  font-family: 'Inconsolata', serif;
+  font-family: "Inconsolata", serif;
 }
 
 * {
@@ -19,6 +19,10 @@ body {
   position: relative;
   width: 300px;
   margin-bottom: 10px;
+}
+
+h1 {
+  font-family: "Roboto Mono", cursive;
 }
 
 hr {
@@ -127,8 +131,8 @@ li a:hover {
 
 .overlay .label {
   background-color: #002b55;
-  color:  #80c565;
+  color: white;
   padding: 10px;
-  font-size: 15px;
+  font-size: 25px;
   text-transform: uppercase;
 }

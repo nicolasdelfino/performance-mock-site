@@ -20,7 +20,7 @@ const App = () => {
     <ul>
       {data.map(item => (
         <li key={item.objectID}>
-          <img src={`${item.image}`} alt={item.title} />
+          <img src={`${item.image}`} alt={item.title} width="300"/>
           <div className="title">{item.title}</div>
         </li>
       ))}
