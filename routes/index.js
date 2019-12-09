@@ -19,11 +19,11 @@ router.get("/items/v1", (req, res) => {
   res.json(data);
 });
 
-router.get("/facebook", (req, res) => {
+router.get("/3rdparty/facebook", (req, res) => {
   res.sendFile('facebook.js', { root: path.join(__dirname, '../public/js/3rd-parties') });
 });
 
-router.get("/fbevents", (req, res) => {
+router.get("/3rdparty/fbevents", (req, res) => {
   res.sendFile('fbevents.js', { root: path.join(__dirname, '../public/js/3rd-parties') });
 });
 
