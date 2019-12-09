@@ -7,7 +7,7 @@ const App = () => {
 
   useEffect(() => {
     const fetchData = () => {
-      axios("http://localhost:4000/items/v1/").then(result => {
+      axios("/items/v1/").then(result => {
         console.log("res", result);
         setData(result.data);
       });
