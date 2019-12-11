@@ -20,8 +20,13 @@ const App = () => {
     <ul>
       {data.map(item => (
         <li key={item.objectID}>
-          <img src={`${item.image}`} alt={item.title} width="300"/>
-          <div className="title">{item.title}</div>
+          <div style={{ position: "relative" }}>
+            <div className="overlay">
+              <div className="label">{item.title}</div>
+            </div>
+
+            <img src={`${item.image}`} alt={item.title} width="300" />
+          </div>
         </li>
       ))}
     </ul>

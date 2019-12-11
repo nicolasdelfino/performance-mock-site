@@ -1,7 +1,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Mock - 1</title>
   <link rel="stylesheet" href="/css/normalize.css" />
 
@@ -10,7 +9,8 @@
   <script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
 
-  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/all/main.css" />
+
   <script src="https://unpkg.com/axios/dist/axios.js"></script>
   <!-- axios min 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -48,10 +48,10 @@
       <div class="overlay">
         <div class="label">hero image</div>
       </div>
-      <img src="images/hero.png" width="1024" />
+      <img src="images/hero.png" />
     </section>
     <h1>Example # 1</h1>
-    <p>
+    <p class="description">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industry's standard dummy text ever since the
       1500s, when an unknown printer took a galley of type and scrambled it to
@@ -67,5 +67,5 @@
     </div>
   </div>
   <%- include('partials/footer.ejs') %>
-  <script src="js/products.js"></script>
+  <script src="js/products.v1.js"></script>
 </body>

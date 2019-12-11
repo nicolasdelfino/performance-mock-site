@@ -3,27 +3,22 @@ body {
   height: 100%;
   margin: 0;
   font-size: 16px;
-  font-family: "Inconsolata", serif;
-}
+  font-family: "Inconsolata", serif; }
 
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .icon {
   float: left;
-  font-size: 30px;
-}
+  font-size: 30px; }
 
 .logo {
   position: relative;
   width: 300px;
-  margin-bottom: 10px;
-}
+  margin-bottom: 10px; }
 
 h1 {
-  font-family: "Roboto Mono", cursive;
-}
+  font-family: "Roboto Mono", cursive; }
 
 hr {
   display: block;
@@ -31,71 +26,62 @@ hr {
   border: 0;
   border-top: 1px solid #ccc;
   margin: 1em 0;
-  padding: 0;
-}
+  padding: 0; }
 
 .content-wrapper {
   margin-right: auto;
   margin-left: auto;
-  max-width: 1024px;
+  width: 100%;
   min-height: 100%;
   margin-bottom: -250px;
-  padding-top: 20px;
-  padding-bottom: 300px;
-}
+  padding: 20px 10px 300px 10px; }
+
+.description {
+  font-size: 1.3rem; }
 
 .footer {
   position: relative;
   height: 250px;
-  background: #80c565;
+  background: #6f65c5;
   color: white;
-  line-height: 50px;
-}
+  line-height: 50px; }
 
 header {
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
 nav {
-  flex: 1;
-}
+  flex: 1; }
 
 ul {
   display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .list {
-  padding: 40px;
-}
+  padding: 40px; }
 
 .list ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-}
+  justify-content: center; }
 
 h1 {
-  font-size: 45px;
-}
+  font-size: 45px; }
 
 .list li {
   flex-direction: column;
-  margin-bottom: 150px;
+  margin-bottom: 20px;
   color: white;
   background: #002b55;
-  padding: 80px;
-}
+  padding: 40px; }
 
 li {
   display: flex;
-  align-items: center;
-}
+  align-items: center; }
 
 li a {
   display: inline;
@@ -103,18 +89,17 @@ li a {
   text-align: center;
   padding: 20px;
   font-size: 20px;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 li a:hover {
-  text-decoration: underline;
-}
+  text-decoration: underline; }
 
 .hero {
   position: relative;
   display: flex;
-  justify-content: center;
-}
+  justify-content: center; }
+  .hero img {
+    width: 100%; }
 
 .overlay {
   display: flex;
@@ -126,13 +111,11 @@ li a:hover {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: transparent;
-}
+  background: #6f65c5; }
 
 .overlay .label {
   background-color: #002b55;
   color: white;
   padding: 10px;
   font-size: 25px;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
