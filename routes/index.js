@@ -1,7 +1,7 @@
 const data = require("./data.json");
 const express = require("express");
 const path = require("path");
-const router = express.Router() // eslint-disab
+const router = express.Router(); // eslint-disab
 
 router.get("/", (req, res) => {
   res.render("slow");
@@ -12,7 +12,7 @@ router.get("/medium", (req, res) => {
 });
 
 router.get("/fast", (req, res) => {
-  res.render("fast");
+  res.render("fast", { da: data });
 });
 
 router.get("/items/v1", (req, res) => {
@@ -20,11 +20,15 @@ router.get("/items/v1", (req, res) => {
 });
 
 router.get("/3rdparty/facebook", (req, res) => {
-  res.sendFile('facebook.js', { root: path.join(__dirname, '../public/js/3rd-parties') });
+  res.sendFile("facebook.js", {
+    root: path.join(__dirname, "../public/js/3rd-parties")
+  });
 });
 
 router.get("/3rdparty/fbevents", (req, res) => {
-  res.sendFile('fbevents.js', { root: path.join(__dirname, '../public/js/3rd-parties') });
+  res.sendFile("fbevents.js", {
+    root: path.join(__dirname, "../public/js/3rd-parties")
+  });
 });
 
 module.exports = router;

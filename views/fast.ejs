@@ -3,14 +3,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Mock - 3</title>
+  <link rel="preload" as="script" href="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=es6" />
+
+  <!-- preload font and use js to load stylesheet -->
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" as="style" crossorigin
+    onload="this.rel = 'stylesheet'">
+  <!-- fallback for no js -->
+  <noscript>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Inconsolata'>
+  </noscript>
+
   <link rel="stylesheet" href="/css/normalize.css" />
-  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/optimized/main.css" />
+  <link rel="stylesheet" media="screen and (min-width:1024px)" href="/css/optimized/main-desktop.css" />
 </head>
+
 <body>
-  <%- include('partials/header.ejs') %>
   <div class="content-wrapper">
-    <img src="/images/hero.png" />
-  </div>
-  <br />
-  <%- include('partials/footer.ejs') %>
+    <%- include('partials/header-fast.ejs') %>
+    <section class="hero">
+      <div class="overlay">
+        <div class="label">hero image</div>
+      </div>
+      <img src="images/hero.png" width="1024" />
+    </section>
+    <h1>Example # 3</h1>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries, but
+      also the leap into electronic typesetting, remaining essentially
+      unchanged. It was popularised in the 1960s with the release of Letraset
+      sheets containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of Lorem
+      Ipsum.
+    </p>
+    <div class="list">
+      <ul>
+        <% for(var i = 0; i < da.length; i++) { %>
+        <li>
+          <div style="position: relative;">
+            <div class="overlay">
+              <div class="label"><%= da[i].title %></div>
+            </div>
+            <img alt="<%= da[i].title %>" height="300" width="300" src="<%= da[i].image %>" />
+          </div>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+    <%- include('partials/footer.ejs') %>
 </body>

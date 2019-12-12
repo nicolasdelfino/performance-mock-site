@@ -5,30 +5,17 @@
   <title>Mock - 2</title>
   <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.js" />
 
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Inconsolata" as="style" crossorigin>
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" />
+  <!-- load font higher up -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" as="style" crossorigin>
 
   <link rel="stylesheet" href="/css/normalize.css" />
   <link rel="stylesheet" href="/css/optimized/main.css" />
   <link rel="stylesheet" media="screen and (min-width:1024px)" href="/css/optimized/main-desktop.css" />
   <link rel="stylesheet" href="/css/icons.css" />
-  <!-- Google Tag Manager -->
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != "dataLayer" ? "&l=" + l : "";
-      j.async = true;
-      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, "script", "dataLayer", "GTM-WFNXKM9");
-  </script>
-  <!-- End Google Tag Manager -->
 </head>
 
 <body>
+
   <div class="content-wrapper">
     <%- include('partials/header.ejs') %>
     <section class="hero">
@@ -54,7 +41,11 @@
     </div>
   </div>
   <%- include('partials/footer.ejs') %>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="/js/3rd-party.js"></script>
+  <script>
+    var polyfillScript = document.createElement('script');
+    polyfillScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.js';
+    document.body.appendChild(polyfillScript);
+  </script>
   <script src="js/products.v2.js"></script>
+  <script src="/js/3rd-party.js"></script>
 </body>

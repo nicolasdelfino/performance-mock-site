@@ -1,9 +1,8 @@
 import babel from "rollup-plugin-babel";
-// import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import resolve from "rollup-plugin-node-resolve";
 import commonJS from "rollup-plugin-commonjs";
 import replace from "@rollup/plugin-replace";
-// import { terser } from "rollup-plugin-terser";
+import { terser } from "rollup-plugin-terser";
 
 const config = {
   input: "features/products/react/v2.js",
@@ -29,7 +28,8 @@ const config = {
           "trackWindowScroll"
         ]
       }
-    })
+    }),
+    terser()
   ]
 };
 
