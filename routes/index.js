@@ -1,4 +1,4 @@
-const data = require("./data.json");
+const jsonData = require("./data.json");
 const express = require("express");
 const path = require("path");
 const router = express.Router(); // eslint-disab
@@ -12,11 +12,11 @@ router.get("/medium", (req, res) => {
 });
 
 router.get("/fast", (req, res) => {
-  res.render("fast", { da: data });
+  res.render("fast", { data: jsonData });
 });
 
 router.get("/items/v1", (req, res) => {
-  res.json(data);
+  res.json(jsonData);
 });
 
 router.get("/3rdparty/facebook", (req, res) => {

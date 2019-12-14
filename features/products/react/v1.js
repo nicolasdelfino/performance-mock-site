@@ -25,7 +25,7 @@ const App = () => {
               <div className="label">{item.title}</div>
             </div>
 
-            <img src={`${item.image}`} alt={item.title} width="300" />
+            <img src={`${item.image}`} alt={item.title} width="300px" />
           </div>
         </li>
       ))}

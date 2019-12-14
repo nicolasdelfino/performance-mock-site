@@ -10,9 +10,12 @@
     "scss:clean": "gulp clean",
     "scss:v1": "gulp slow",
     "scss:v2": "gulp medium",
+    "scss:v3": "gulp fast",
+    "scss": "npm run scss:clean && npm run scss:v1 && npm run scss:v2 && npm run scss:v3",
     "bundle:slow": "npm run bundle:react:v1 && npm run scss:v1",
     "bundle:medium": "npm run bundle:react:v2 && npm run scss:v2",
-    "build": "npm run scss:clean && npm run bundle:slow && npm run bundle:medium"
+    "bundle:fast": "npm run scss:v3",
+    "build": "npm run scss:clean && npm run bundle:slow && npm run bundle:medium && npm run bundle:fast"
   },
   "author": "",
   "license": "ISC",
@@ -43,6 +46,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.17.0",
     "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
     "nodemon": "^2.0.1",

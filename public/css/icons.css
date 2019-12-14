@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'cmp-fa5';
-  src:  url('fonts/cmp-fa5.eot?35pcdi');
-  src:  url('fonts/cmp-fa5.eot?35pcdi#iefix') format('embedded-opentype'),
-    url('fonts/cmp-fa5.woff2?35pcdi') format('woff2'),
-    url('fonts/cmp-fa5.ttf?35pcdi') format('truetype'),
-    url('fonts/cmp-fa5.woff?35pcdi') format('woff'),
-    url('fonts/cmp-fa5.svg?35pcdi#cmp-fa5') format('svg');
+  font-family: 'icons';
+  src:  url('fonts/icons.eot?35pcdi');
+  src:  url('fonts/icons.eot?35pcdi#iefix') format('embedded-opentype'),
+    url('fonts/icons.woff2?35pcdi') format('woff2'),
+    url('fonts/icons.ttf?35pcdi') format('truetype'),
+    url('fonts/icons.woff?35pcdi') format('woff'),
+    url('fonts/icons.svg?35pcdi#cmp-fa5') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -13,7 +13,7 @@
 
 [class^="fa-"], [class*=" fa-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'cmp-fa5' !important;
+  font-family: 'icons' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;

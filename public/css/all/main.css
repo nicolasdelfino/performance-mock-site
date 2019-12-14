@@ -17,6 +17,9 @@ body {
   position: relative;
   width: 300px;
   margin-bottom: 10px; }
+  .logo img {
+    width: 300px;
+    height: 80px; }
 
 h1 {
   font-family: "Roboto Mono", cursive; }
@@ -100,7 +103,8 @@ li a:hover {
   display: flex;
   justify-content: center; }
   .hero img {
-    width: 100%; }
+    width: 100%;
+    height: 225px; }
 
 .overlay {
   display: flex;
@@ -131,6 +135,7 @@ li a:hover {
 
 @media screen and (min-width: 1024px) {
   .content-wrapper {
-    max-width: 1024px; }
+    max-width: 1024px;
+    padding: 20px 0px 300px 0px; }
   .list ul {
     justify-content: space-between; } }

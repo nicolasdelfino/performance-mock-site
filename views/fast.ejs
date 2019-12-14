@@ -3,6 +3,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Mock - 3</title>
+  <!-- preconnect to 3rd party provider -->
+  <link rel="preconnect" href="http://localhost:4001">
+
   <link rel="preload" as="script" href="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=es6" />
 
   <!-- preload font and use js to load stylesheet -->
@@ -16,6 +19,8 @@
   <link rel="stylesheet" href="/css/normalize.css" />
   <link rel="stylesheet" href="/css/optimized/main.css" />
   <link rel="stylesheet" media="screen and (min-width:1024px)" href="/css/optimized/main-desktop.css" />
+
+  <script src="http://localhost:4001/3rdparty/core" crossorigin></script>
 </head>
 
 <body>
@@ -25,7 +30,7 @@
       <div class="overlay">
         <div class="label">hero image</div>
       </div>
-      <img src="images/hero.png" width="1024" />
+      <img src="images/hero.webp" width="1024" />
     </section>
     <h1>Example # 3</h1>
     <p>
@@ -41,17 +46,18 @@
     </p>
     <div class="list">
       <ul>
-        <% for(var i = 0; i < da.length; i++) { %>
+        <% for(var i = 0; i < data.length; i++) { %>
         <li>
           <div style="position: relative;">
             <div class="overlay">
-              <div class="label"><%= da[i].title %></div>
+              <div class="label"><%= data[i].title %></div>
             </div>
-            <img alt="<%= da[i].title %>" height="300" width="300" src="<%= da[i].image %>" />
+            <img alt="<%= data[i].title %>" height="300" width="300" src="<%= data[i].image %>" />
           </div>
         </li>
         <% } %>
       </ul>
     </div>
     <%- include('partials/footer.ejs') %>
+    <script src="http://localhost:4001/3rdparty/" crossorigin></script>
 </body>
