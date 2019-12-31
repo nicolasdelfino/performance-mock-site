@@ -16,10 +16,11 @@
     <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Inconsolata'>
   </noscript>
 
-  <link rel="stylesheet" href="/css/normalize.css" />
+  <link rel="stylesheet" href="/css/optimized/normalize.css" />
   <link rel="stylesheet" href="/css/optimized/main.css" />
   <link rel="stylesheet" media="screen and (min-width:1024px)" href="/css/optimized/main-desktop.css" />
 
+  <!-- load core 3rd parties (e.g GA) -->
   <script src="http://localhost:4001/3rdparty/core" crossorigin></script>
 </head>
 
@@ -30,7 +31,7 @@
       <div class="overlay">
         <div class="label">hero image</div>
       </div>
-      <img src="images/hero.webp" width="1024" />
+      <img src="images/hero.webp" width="1024" loading="lazy" />
     </section>
     <h1>Example # 3</h1>
     <p>
@@ -58,6 +59,12 @@
         <% } %>
       </ul>
     </div>
-    <%- include('partials/footer.ejs') %>
-    <script src="http://localhost:4001/3rdparty/" crossorigin></script>
+  </div>
+  <%- include('partials/footer.ejs') %>
+  <script>
+    var polyfillScript = document.createElement('script');
+    polyfillScript.src = 'https://polyfill.io/v3/polyfill.min.js?flags=gated&features=es6';
+    document.body.appendChild(polyfillScript);
+  </script>
+  <script src="http://localhost:4001/3rdparty/" crossorigin></script>
 </body>

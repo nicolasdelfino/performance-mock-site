@@ -21,9 +21,9 @@ const App = () => {
       {data.map(item => (
         <li key={item.objectID}>
           <div style={{ position: "relative" }}>
-            <div className="overlay">
+            {/* <div className="overlay">
               <div className="label">{item.title}</div>
-            </div>
+            </div> */}
 
             <img src={`${item.image}`} alt={item.title} width="300px" />
           </div>
