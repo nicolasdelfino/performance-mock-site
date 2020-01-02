@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=production nodemon server.js",
+    "start": "NODE_ENV=production nodemon -e js,ejs,html --watch views --watch routes server.js",
     "bundle:react:v1": "rollup -c rollup.config.v1.js",
     "bundle:react:v2": "rollup -c rollup.config.v2.js",
     "scss:clean": "gulp clean",

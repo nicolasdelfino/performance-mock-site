@@ -2,28 +2,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mock - 1</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.js"></script>
-
   <link rel="stylesheet" href="/css/normalize.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.js"></script>
 
   <script src="https://kit.fontawesome.com/4a5601eb6a.js" crossorigin="anonymous"></script>
 
-  <script src="https://unpkg.com/axios/dist/axios.js"></script>
-
-  <link rel="stylesheet" href="/css/all/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" />
 
   <script src="http://localhost:4001/3rdparty/all" crossorigin></script>
 
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/all/main.css" />
+
+  <script src="https://unpkg.com/axios/dist/axios.js"></script>
 </head>
 
 <body>
   <div class="content-wrapper">
-    <%- include('partials/header.ejs') %>
+    <%- include('partials/header-slow.ejs') %>
     <section class="hero">
-      <img src="images/bann.jpg" />
+      <div class="overlay">
+        <div class="label">hero image</div>
+      </div>
+      <img src="images/hero.png" />
     </section>
-    <h1>Example # 1</h1>
+    <h1>Example #1</h1>
     <p class="description">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industry's standard dummy text ever since the

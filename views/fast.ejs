@@ -2,18 +2,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Mock - 3</title>
+  <title>Mock - 2</title>
   <!-- preconnect to 3rd party provider -->
   <link rel="preconnect" href="http://localhost:4001">
 
   <link rel="preload" as="script" href="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=es6" />
 
   <!-- preload font and use js to load stylesheet -->
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" as="style" crossorigin
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel&display=swap" as="style" crossorigin
     onload="this.rel = 'stylesheet'">
   <!-- fallback for no js -->
   <noscript>
-    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Inconsolata'>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Abel' crossorigin>
   </noscript>
 
   <link rel="stylesheet" href="/css/optimized/normalize.css" />
@@ -31,9 +31,9 @@
       <div class="overlay">
         <div class="label">hero image</div>
       </div>
-      <img src="images/hero.webp" width="1024" loading="lazy" />
+      <img src="images/hero.webp" width="1024" loading="auto" />
     </section>
-    <h1>Example # 3</h1>
+    <h1>Example #2</h1>
     <p>
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
       Lorem Ipsum has been the industry's standard dummy text ever since the
@@ -53,7 +53,7 @@
             <div class="overlay">
               <div class="label"><%= data[i].title %></div>
             </div>
-            <img alt="<%= data[i].title %>" height="300" width="300" src="<%= data[i].image %>" />
+            <img alt="<%= data[i].title %>" height="300" width="300" src="<%= data[i].image %>" loading="lazy" />
           </div>
         </li>
         <% } %>
@@ -64,6 +64,7 @@
   <script>
     var polyfillScript = document.createElement('script');
     polyfillScript.src = 'https://polyfill.io/v3/polyfill.min.js?flags=gated&features=es6';
+    polyfillScript.setAttribute('crossorigin', '');
     document.body.appendChild(polyfillScript);
   </script>
   <script src="http://localhost:4001/3rdparty/" crossorigin></script>
