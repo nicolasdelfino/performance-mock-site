@@ -28,6 +28,7 @@ export default {
           "trackWindowScroll"
         ]
       }
-    })
+    }),
+    terser()
   ]
 };

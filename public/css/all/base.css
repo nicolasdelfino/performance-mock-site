@@ -4,7 +4,8 @@ body {
   margin: 0;
   font-size: 16px;
   font-family: "Abel", sans-serif;
-  color: black; }
+  color: black;
+  line-height: initial !important; }
 
 * {
   box-sizing: border-box; }
@@ -38,7 +39,7 @@ hr {
   padding: 20px 10px 300px 10px; }
 
 .description {
-  font-size: 1.3rem; }
+  font-size: 18px; }
 
 .footer {
   position: relative;

@@ -5,6 +5,7 @@ body {
   font-size: 16px;
   font-family: "Abel", sans-serif;
   color: black;
+  line-height: initial !important;
 }
 
 * {
@@ -46,7 +47,7 @@ hr {
 }
 
 .description {
-  font-size: 1.3rem;
+  font-size: 18px;
 }
 
 .footer {
